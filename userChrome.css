@@ -1,0 +1,88 @@
+
+/*hide shitty context menus*/
+#context-openlinkinusercontext-menu, 
+#context-sendlinktodevice,
+#context-back,
+#context-forward,
+#context-bookmarkpage,
+#context-reload {
+  display: none !important;
+}
+
+menu, menuitem {
+  color: #8C8C8C !important;
+  -moz-appearance: none !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+menubar > menu[disabled="true"],
+menupopup > menu[disabled="true"],
+popup > menu[disabled="true"],
+menuitem[disabled="true"] {
+  color: #4C4C4C !important;
+}
+
+/* This changes the color on hover of the context-menu items */
+menubar > menu[_moz-menuactive="true"],
+menupopup > menu[_moz-menuactive="true"],
+popup > menu[_moz-menuactive="true"],
+menuitem[_moz-menuactive="true"] {
+  background-color: #333333 !important;
+  color: #FFF !important;
+}
+
+/* This does the same but for disabled ones */
+menubar > menu[_moz-menuactive="true"][disabled="true"],
+menupopup > menu[_moz-menuactive="true"][disabled="true"],
+popup > menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+  background-color: #242424 !important;
+  color: #4C4C4C !important;
+}
+
+menupopup {
+  background-color: #242424 !important;
+  -moz-appearance: none !important;
+}
+
+/*Url and Searchbar*/
+#urlbar, .searchbar-textbox, toolbarbutton {
+  border-radius: 0 !important;
+}
+
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
+  border-color: #00ADEE !important;
+}
+
+
+/* Tooltips. */
+tooltip, tooltip[default="true"] {
+    -moz-appearance: none !important;
+    background-color: red !important;
+} 
+
+tooltip * {
+    padding: 4px 5px !important;
+    border: 1px solid #191919 !important;
+    background-color: #191919 !important;
+    color: #00ADEE !important;
+    font-size: 11pt !important;
+    line-height: 12px !important;
+    float: none;
+}
+
+/*Status bar (bottom of screen)*/
+#statuspanel-label {
+  background-color: #191919 !important;
+  border-color: #191919 !important;
+  color: #00ADEE !important;
+}
+
+/*Bookmark toolbar items*/
+.bookmark-item:hover, .bookmark-item {
+  border-radius: 0px !important;
+}

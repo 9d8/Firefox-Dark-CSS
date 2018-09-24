@@ -1,0 +1,30 @@
+:root {
+	/*background color for about pages*/
+	--in-content-page-background: #2A2D2D !important;
+	/*default text color for about page*/
+	--in-content-page-color: #8C8C8C !important;
+	--in-content-text-color: #8C8C8C !important;
+	/*color for button and separator borders*/
+	--in-content-box-border-color: #191919 !important;
+	/*color for non-selected text and icon for settings category*/
+	--in-content-category-text: #8C8C8C !important;
+	/*color for selected text and icon for settings category*/
+	--in-content-category-text-selected: #00ADEE !important;
+	/*about:config table colors*/
+	--in-content-box-background: #2A2D2B !important;
+	--in-content-box-background-odd: #353535 !important;
+	--in-content-item-selected: #00ADEE !important;
+	/*about:config selected text color*/
+	--in-content-selected-text: #FFFFFF !important;
+}
+
+/*text color for addon descriptions*/
+.detail-view-container {
+	color: #8C8C8C !important;
+}
+
+/*Text for bottom text of addon descriptions (with the checkboxes 
+ *and stuff.*/
+.detail-row, .detail-row-complex {
+	text-shadow: 0 1px 1px #333333 !important;
+}
