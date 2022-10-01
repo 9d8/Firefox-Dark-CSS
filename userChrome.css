@@ -1,6 +1,14 @@
+:root {
+	/* Background color for bookmark context menu */
+	--arrowpanel-background: #242424 !important;
+	/* Text color for bookmark context menu */
+	--arrowpanel-color: #8C8C8C !important;
+	/* Default color when switching pages */
+	--tabpanel-background-color: #242424 !important;
+}
 
 /*hide shitty context menus*/
-#context-openlinkinusercontext-menu, 
+/*#context-openlinkinusercontext-menu, */
 #context-sendlinktodevice,
 #context-back,
 #context-forward,
@@ -10,12 +18,10 @@
 }
 
 menu, menuitem {
-  color: #8C8C8C !important;
-  -moz-appearance: none !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  padding-left: 6px !important;
-  padding-right: 6px !important;
+	color: #8C8C8C;
+	background-color: #242424 !important;
+	/* Allows us to modify menuitem css */
+	-moz-appearance: none !important;
 }
 
 menubar > menu[disabled="true"],
@@ -43,9 +49,9 @@ menuitem[_moz-menuactive="true"][disabled="true"] {
   color: #4C4C4C !important;
 }
 
-menupopup {
-  background-color: #242424 !important;
-  -moz-appearance: none !important;
+/* Fix weird transparency bug with context menu */
+#PlacesToolbar menupopup {
+	background-color: #242424;
 }
 
 /*Url and Searchbar*/
@@ -62,11 +68,10 @@ menupopup {
 /* Tooltips. */
 tooltip, tooltip[default="true"] {
     -moz-appearance: none !important;
-    background-color: red !important;
+	padding: 0px;
 } 
 
 tooltip * {
-    padding: 4px 5px !important;
     border: 1px solid #191919 !important;
     background-color: #191919 !important;
     color: #00ADEE !important;
@@ -86,3 +91,32 @@ tooltip * {
 .bookmark-item:hover, .bookmark-item {
   border-radius: 0px !important;
 }
+
+/**/
+#sidebar-box {
+  background-color: #242424 !important;
+  color: #8C8C8C !important;
+}
+
+.sidebar-placesTree {
+  color: #8C8C8C !important;
+}
+
+/* DISABLE EXPANDING START */
+    #urlbar[breakout][breakout-extend] {
+        top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+
+    #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+        height: var(--urlbar-height) !important;
+        padding-block: 0 !important;
+        padding-inline: 0 !important;
+    }
+
+    #urlbar[breakout][breakout-extend] > #urlbar-background {
+        animation-name: none !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .05) !important;
+    }
+/* DISABLE EXPANDING END */
